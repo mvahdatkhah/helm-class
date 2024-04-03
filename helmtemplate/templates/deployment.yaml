@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-{{- include "helmtemplate.labels" . | nindent 8 | lower }}
+{{- include "helmtemplate.labels" . | indent 4 | lower }}
     spec:
       containers:
       - name: nginx
