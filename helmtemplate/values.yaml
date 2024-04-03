@@ -1,5 +1,5 @@
 deployments:
-  replicaCount: 3
+  replicaCount: 15
   image: nginx:1.22
 services:
   serviceType: NodePort
