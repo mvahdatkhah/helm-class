@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-{{ .Chart.Name }}-deployment
+  labels:
+{{- include "helmtemplate.labels" . | lower }}
+spec:
+  replicas: {{ .Values.deployments.replicaCount }}
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+{{- include "helmtemplate.labels" . | lower }}
+    spec:
+      containers:
+      - name: nginx
+        image: {{ .Values.deployments.image }}
+        ports:
+        - containerPort: 80

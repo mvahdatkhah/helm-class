@@ -1,0 +1,6 @@
+deployments:
+  replicaCount: 3
+  image: nginx:1.22
+services:
+  serviceType: ClusterIP
+  port: 8080
