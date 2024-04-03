@@ -1,5 +1,5 @@
 {{/* Common Labels */}}
 {{- define "helmtemplate.labels"}}
     app: nginx
-    chartname: {{ .Chart.Name }}
+    #chartname: {{ .Chart.Name }}
 {{- end }}
