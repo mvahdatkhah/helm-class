@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-{{ .Chart.Name }}-deployment
+  name: {{ .Release.Name }}-{{ .Chart.Name }}
   labels:
 {{- include "helmtemplate.labels" . | lower }}
 spec:
@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-{{- include "helmtemplate.labels" . | lower }}
+{{- include "helmtemplate.labels" . | nindent 8 | lower }}
     spec:
       containers:
       - name: nginx
