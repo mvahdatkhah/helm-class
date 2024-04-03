@@ -10,4 +10,4 @@ spec:
     - name: http
       port: {{ .Values.services.port }}
       targetPort: 80 # Container Port
-      nodePort: 30007 # Node Port
+      nodePort: {{ .Values.services.nodePort }} # Node Port

@@ -4,3 +4,4 @@ deployments:
 services:
   serviceType: NodePort
   port: 8080
+  nodePort: 30007
