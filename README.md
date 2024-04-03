@@ -48,13 +48,13 @@ cd helmtemplate
 helm template namedtemplate .
 
 # Helm Install with dry-run command
-helm install myapp101 . --dry-run
+helm install namedtemplate . --dry-run
 
 # Helm Release
-helm install myapp101 . --atomic
+helm install namedtemplate . --atomic
 kubectl get deploy
 kubectl describe deploy <DEPLOYMENT-NAME>
-helm uninstall myapp101
+helm uninstall namedtemplate
 ```
 
 ## Step-05: Add one Builtin Object Chart.Name to labels
@@ -75,7 +75,7 @@ cd helmtemplate
 helm template namedtemplate .
 
 # Helm Install with dry-run command
-helm install myapp101 . --dry-run
+helm install namedtemplate . --dry-run
 Observation:
 1. Chart name filed should be empty
 2. Chart Name was not in the scope for our defined template.
@@ -104,7 +104,7 @@ cd helmtemplate
 helm template namedtemplate .
 
 # Helm Install with dry-run command
-helm install myapp101 . --dry-run
+helm install namedtemplate . --dry-run
 Observation:
 Chart Name should be displayed
 ```
@@ -128,7 +128,7 @@ cd helmtemplate
 helm template namedtemplate .
 
 # Helm Install with dry-run command
-helm install myapp101 . --dry-run
+helm install namedtemplate . --dry-run
 Observation:
 1. Should fail with error. What is the reason for failure ?
 2. Template is an action, and not a function, there is no way to pass the output of a template call to other functions;
@@ -153,7 +153,7 @@ cd helmtemplate
 helm template namedtemplate .
 
 # Helm Install with dry-run command
-helm install myapp101 . --dry-run
+helm install namedtemplate . --dry-run
 Observation:
 1. Call include "helmtemplate.labels" -- should be successful
 2. Should show all labels in upper case
@@ -180,7 +180,7 @@ cd helmtemplate
 helm template namedtemplate .
 
 # Helm Install with dry-run command
-helm install myapp101 . --dry-run
+helm install namedtemplate . --dry-run
 Observation:
 1. call include "helmtemplate.labels" -- should be successful
 2. Should show all labels in upper case
