@@ -1,9 +1,9 @@
 # Helm Development - Named Templates
 
-## What is  named template ?**
+## What is  named template ?
 - A template defined inside a file (_helpers.tpl) and given a name.
 
-## How to declare a named template ?**
+## How to declare a named template ?
 - We can declare it using define action
 - What is the naming convention for named templates ?
 - Template names are global
