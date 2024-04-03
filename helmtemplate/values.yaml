@@ -3,5 +3,5 @@ deployments:
   image: nginx:1.22
 services:
   serviceType: NodePort
-  port: 8080
+  port: 80
   nodePort: 30007
